@@ -8,16 +8,30 @@ const rootElement = document.getElementById(
   'root',
 )
 const Message = props => (
+  
   <div>{props.children}</div>
 )
+
+const Mycomponent = props => (
+  <div> {props.children}</div>
+)
+
+console.log(<Message>Goodbye World</Message>);
+
 const element = (
   <div className="container">
     <Message>
       Hello World
       <Message>Goodbye World</Message>
     </Message>
+
+    <Mycomponent>
+      This is my Component  
+    </Mycomponent>
+
   </div>
 )
 ReactDOM.render(element, rootElement)
+
 </script>
 </body>
