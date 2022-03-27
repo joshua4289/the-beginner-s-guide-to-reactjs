@@ -1,0 +1,39 @@
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@16.3.0/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16.3.0/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+<script type="text/babel">
+
+
+function CharaterCount({text}){
+  //normal JS  
+  return (
+  <div>
+  {`this text has ${text} `}
+  { text.length ? <strong>{text.length}</strong> : 'No ' }
+  { ' characters' }
+  </div>
+  )
+}
+
+
+
+const rootElement = document.getElementById(
+  'root',
+)
+
+const content = 'Hello World'
+const myClassName = 'container'
+const props = {
+  className: 'container',
+  children: 'Hello World',
+}
+const element = (
+<React.Fragment>
+<CharaterCount text=""/>
+<CharaterCount text="this is what I need to count" />
+</React.Fragment>)
+ReactDOM.render(element, rootElement)
+</script>
+</body>
